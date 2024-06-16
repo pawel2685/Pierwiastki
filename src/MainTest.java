@@ -33,6 +33,14 @@ class MainTest {
         });
     }
 
+    @Test
+    void testDiscriminantZero() {
+        double[] expected = {-0.5};
+        double[] result = Main.solveEquation(4, 4, 1);
+        assertNotNull(result);
+        assertEquals(1, result.length);
+        assertArrayEquals(expected, result, 1e-9);
+    }
 
 
 
