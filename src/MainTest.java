@@ -26,6 +26,13 @@ class MainTest {
         assertNull(result);
     }
 
+    @Test
+    void testInvalidCoefficientA() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            Main.solveEquation(0, 2, 1);
+        });
+    }
+
 
 
 
