@@ -20,6 +20,12 @@ class MainTest {
         assertEquals(1, result.length);
         assertArrayEquals(expected, result, 1e-9);
     }
+    @Test
+    void testNoRealRoots() {
+        double[] result = Main.solveEquation(1, 0, 1);
+        assertNull(result);
+    }
+
 
 
 
